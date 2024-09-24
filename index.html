@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Calculadora de Notas</title>
+</head>
+<body>
+    <div id="container">
+      <div>
+          <h1 class="title">Calculadora de Notas</h1>
+      </div>
+      <div id="texts">
+          <form class="gradesForm" id="gradesform">
+              <label for="period">
+                <p class="names_bimester">Período da Matéria</p>
+              </label>
+              <p>
+                <select name="period" id="period_" class="forminput" onchange="atualizouSelect()" required>
+                  <option disabled selected value="0">Escolha uma opção</option>
+                  <option value="Anual" id="anual">Anual</option>
+                  <option value="Semestral" id="semester">Semestral</option>
+                </select>
+              </p>
+              <label for="first">
+                <p class="names_bimester">Nota do 1º bimestre:</p>
+              </label>
+              <p>
+                <input type="number" min="0" max="100" placeholder="60" name="first" id="first" class="forminput">
+              </p>
+              <label for="second">
+                <p class="names_bimester">Nota do 2º bimestre:</p>
+              </label>
+              <p>
+                <input type="number" min="0" max="100" placeholder="60" name="second" id="second" class="forminput">
+              </p>
+              <label for="third">
+                <p class="names_bimester" id="bimester3" class="thirdandfourth">Nota do 3º bimestre:</p>
+              </label>
+              <p>
+                <input type="number" min="0" max="100" placeholder="60" name="third" id="third" class="forminput"> 
+              </p>
+              <label for="fourth">
+                <p class="names_bimester" id="bimester4" class="thirdandfourth">Nota do 4º bimestre:</p>
+              </label>
+              <p>
+                <input type="number" min="0" max="100" placeholder="60" name="fourth" id="fourth" class="forminput"> 
+              </p>
+              <button type="submit" id="calculo" class="calculate">Calcular!</button>
+          </form>
+      </div>
+      <div id="allgrades">
+        <div id="situation">
+          Situação: 
+          <span id="whatsituation">0.00</span>
+        </div>
+        <div id ="totalgrade1">
+          Média: 
+          <span id="grade">0.00</span>
+        </div>
+        <div id="totalgrade2">
+          <span id="phrase">
+            Você precisa de <span id="missing"></span> para ser aprovado.
+          </span>
+        </div>
+      </div>
+     </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>  
