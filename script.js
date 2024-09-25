@@ -72,8 +72,6 @@ function calculatesemester(event1) {
                 div_situacao.style.display = "block";
                 div_nota_que_falta.style.display = "none";
             }
-
-
         }
     }
 }
