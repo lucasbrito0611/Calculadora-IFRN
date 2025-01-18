@@ -24,6 +24,7 @@ function calculatesemester(event1) {
 
     if (firstsemester == '') {
         alert("Por favor, preencha os valores.");
+        return;
     }
 
     let bi_1 = firstsemester * 2;
@@ -190,6 +191,9 @@ function atualizouSelect() {
     let select = document.querySelector('#period_')
     let optionvalue = select.options[select.selectedIndex];
     let value = optionvalue.value;
+
+    form.removeEventListener('submit', calculatesemester); 
+    form.removeEventListener('submit', calculateanual);
     
     if (value == 'Semestral') {
         document.getElementById('bimester3').style.display = "none";
@@ -211,6 +215,3 @@ function atualizouSelect() {
 div_media.style.display = "none";
 div_nota_que_falta.style.display = "none"; 
 div_situacao.style.display = "none";  
-
-document.getElementsByClassName('forminput').addEventListener('input', calculateanual);
-document.getElementsByClassName('forminput').addEventListener('input', calculatesemester);
