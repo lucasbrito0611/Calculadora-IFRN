@@ -143,9 +143,10 @@ function calculateanual(event2) {
             div_nota_que_falta.textContent = `Você precisa de ${missing_anual} no 4º bimestre para ser aprovado.`
         }
     
-        if (missing_anual <= 0) {
+        if (missing_anual <= 0 || average_anual >= 60) {
             situacao.innerHTML = 'Aprovado';
             div_situacao.style.display = "block";
+            div_nota_que_falta.style.display = "none";
         }
     
         if (missing_anual > 100) {
